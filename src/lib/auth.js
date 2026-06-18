@@ -11,6 +11,10 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export const auth = betterAuth({
   baseURL: process.env.BETTER_AUTH_URL,
   secret: process.env.BETTER_AUTH_SECRET,
+    trustedOrigins: [
+    "http://localhost:3000",
+    "https://nextjs-better-auth-lime.vercel.app",
+  ],
   database: mongodbAdapter(client.db()),
   user: {
     additionalFields: {  // add role field in user collection
