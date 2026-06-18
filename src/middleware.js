@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 export  function middleware(req) {
+    const token =
     req.cookies.get("__Secure-better-auth.session_token") ||
     req.cookies.get("better-auth.session_token");
     const isAuthPage =
