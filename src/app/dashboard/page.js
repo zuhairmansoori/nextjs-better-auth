@@ -20,7 +20,8 @@ async function Page() {
   // console.log('this is dashboard', session);
   // console.log(session?.user.emailVerified);
 // console.log('this is image',session.user.image);
-
+console.log("SESSION =>", session)
+console.log("EMAIL VERIFIED =>", session?.user?.emailVerified)
 
   if (!session) {
     redirect('/')
